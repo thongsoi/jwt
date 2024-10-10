@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Dashboard</h1>
+        <p>This is a protected page. You can only see this if you're logged in.</p>
+        <form hx-post="/logout" hx-redirect="/login">
+            <button type="submit">Logout</button>
+        </form>
+    </div>
+</body>
+</html>
