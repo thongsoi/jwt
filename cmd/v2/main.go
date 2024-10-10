@@ -43,7 +43,7 @@ func main() {
 	// HTTP Server configuration
 	srv := &http.Server{
 		Handler:      r,
-		Addr:         ":8080",
+		Addr:         ":8000",
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
 		IdleTimeout:  60 * time.Second,
@@ -65,7 +65,7 @@ func main() {
 		close(idleConnsClosed)
 	}()
 
-	log.Println("Server started on :8080")
+	log.Println("Server started on :8000")
 	if err := srv.ListenAndServe(); err != http.ErrServerClosed {
 		log.Fatalf("ListenAndServe(): %v", err)
 	}
